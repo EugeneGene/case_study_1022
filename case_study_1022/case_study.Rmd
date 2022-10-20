@@ -1,0 +1,61 @@
+---
+title: "Case study"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: false
+editor_options: 
+  chunk_output_type: inline
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(include = TRUE)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.align = 'center')
+
+```
+
+This case study consists of two parts, a short theoretical part, which is based on two questions, and an applied part, which consists of four exercises. Please add your solutions to this RMD file and knit it to an HTML document.
+
+# Part 1 - Theory
+
+## Question 1
+
+Assume you have subnational labor market data for a country for several years in the past. Which data and methods would you consider to create forecasts of the expected numbers of employed, unemployed and inactive persons in future years?
+
+## Question 2
+
+Assume you have data on the numbers of employed by sector for several countries from different surveys, which include different sectors and subsectors. How would you combine and structure these data to present comparable numbers for all countries?
+
+# Part 2 - Applications
+
+The topic of the applied exercises is population density in Colombia and how we can increase the granularity of population density estimates based on geospatial data. For the exercises, please use the data sets "colombia_input.fst" and "quindio_input_grid.fst". "colombia_input.fst" contains municipality level data for all of Colombia, "quindio_input_grid.fst" contains grid level data for the department of Quindío. Both data sets contain geocodes of the municipalities ("raster_geocode_100"), population density data on the municipality level ("raster_pop_100") and a set of variables that are potentially related to population density. In "colombia_input.fst" these explanatory variables are on the municipality level, in "quindio_input_grid.fst" they are on the grid level. They contain information on parameters like night lights, landcover classes and the distance to different facilities. In addition, "quindio_input_grid.fst" also contains information on the coordinates of the grids ("x" and "y").
+
+## Exercise 1
+
+Use the input data for Colombia on the municipality level ("colombia_input.fst") to create a plot that visualizes the relationship between population density ("raster_pop_100") and light intensity recorded at night ("night_lights_100").
+
+## Exercise 2
+
+Use the input data for Colombia on the municipality level ("colombia_input.fst") to train a suitable (machine learning) model to predict population density based on the other variables in the data set.
+
+## Exercise 3
+
+Use your trained model and the grid-level data for Qunidío ("quindio_input_grid.fst") to make a prediction of the grid-level population density of Quindío. Make sure that the sums of your grid-level population predictions match the official numbers on the municipality level.
+
+## Exercise 4
+
+Create a plot showing maps of the population density in Qundío (i) based on the input data and (ii) based in your predictions side by side.
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
